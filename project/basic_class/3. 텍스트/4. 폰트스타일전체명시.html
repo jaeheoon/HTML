@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>폰트스타일</title>
+		<style>
+			p.a1{color:pink; background:green;} /*텍스트칼라는 color만 기입 중요*/
+			/*글씨색깔은 폰트없이 컬러 백그라운드는 폰트없이 백그라운드만 쓴다  font-color - 아님, font-background - 아님*/
+			p.a2{font-style:italic;} /*글자스타일, 기본은 normal, italic은 기울이기*/
+			p.a3{font-weight:bold;} /*글자굵기, 400-900까지 굵기 선택 가능, 서체마다 틀림*/
+			p.a4{font-family:"돋움", dotum, "굴림", gulim, sans-serif;} /*글자글꼴, 고딕체*/
+			p.a5_1{font-variant:small-caps;} /*small-caps는 소문자 크기의 대문자*/
+			p.a6{font:bold italic 18px/2.5 /*행간표기배율*/
+			"돋움", dotum, "굴림", gulim, sans-serif;}
+			p.end{font:bold 25px/18px /*행간표기고정*/
+			'나눔고딕',Arial, sans-serif;}
+			p.end{font:bold 25px/45px '나눔고딕',Arial, sans-serif;}
+			/*(공통정의)로 쓰려면 순서를 맞춰서 써야함, weight, style, variant 크기/line-height(행간격) 서체, 
+			공통정의 시 font-size, font-family 반드시 기입해야 함, 그렇지 않으면 인식하지 못함*/
+		</style>
+	</head>
+
+	<body>
+		<p class="a1">글자컬러pink백그라운드색green</p>
+		<p class="a2">글자스타일</p>
+		<p class="a3">글자굵기</p>
+		<p class="a4">글자글꼴</p>
+		<p class="a5">원래 The end</p>/*5_1비교하기위해 작성*/
+		<p class="a5_1">소문자크기대문자the end</p>
+		<p class="a6">TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal<br>TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal<br>
+		TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal</p>
+		<p class="end">TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal<br>TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal<br>
+		TotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotalTotal</p>
+		
+
+	</body>
+
+</html>

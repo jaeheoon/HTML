@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>box떨어지는기본</title>
+  
+  <style>
+  *{margin:0; padding:0;}
+  
+  #tbox{width: 400px; background:red; margin: 0 auto; border: 1px solid red;}
+  #border_box_div{width: 50%; height: 200px; background: blue; border: 30px solid black; padding: 10px;
+  box-sizing:border-box; float:left;}
+  /* float:left; 껌딱지 위로 띄워 규칙적으로 옆(좌)로 붙는 개념 */
+  #content_box_div{width: 50%; height: 200px; background: blue; border: 30px solid pink; padding: 10px;
+  float:left;}
+  </style>
+
+</head>
+
+
+<body>
+  <div id="tbox">
+   <div id="border_box_div">30픽셀의 테두리를 안쪽에 그려줍니다.</div>
+   <div id="content_box_div">외부의 30픽셀의 테두리를 그려줍니다.</div>
+  </div>
+
+
+
+</body>
+
+</html>

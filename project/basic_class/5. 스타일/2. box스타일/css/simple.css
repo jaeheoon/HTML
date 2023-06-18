@@ -1,0 +1,9 @@
+*{margin:0; padding:0;}
+div{width:500px; text-align:center; background:pink;}
+div.simple1{margin:20px auto;}
+div.simple2{margin:10px auto; padding:100px;}
+div.simple3{margin:40px auto; padding:50px;}
+div.simple4{margin:10px auto; padding:30px;}
+div.simple5{margin:50px auto; padding:20px;}
+/*박스크기 변함*/
+/*margin은 합산으로 크기가 커지지않고 둘 중 비교하여 큰쪽만 나온다 ex)margin:50px와 margin:20px는 둘 중 50px로 크기가 나온다*/

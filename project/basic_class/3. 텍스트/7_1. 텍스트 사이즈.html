@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<style>
+			/*{margin:0; padding:0;}*/
+			p{font-family:'나눔고딕', Arial, sans-serif;}
+			p.f1{font-size:12pt;}
+			p.f2{font-size:24pt;}
+			p.f3{font-size:16px;}
+			p.f4{font-size:32px;}
+			
+			span.s1{background:yellow; color:blue;}
+			
+			p.fs1{font-size:100%;}
+			p.fs2{font-size:200%;}
+			p.fs3{font-size:300%;}
+			
+			p.fk1{font-size:small;}
+			p.fk2{font-size:medium;}
+			p.fk3{font-size:large;}
+			p.fk4{font-size:x-large;}
+			
+			p.a1{font-size:1em;}
+			p.a2{font-size:1.5em;}
+			p.a3{font-size:2em;}
+		</style>
+	</head>
+
+	<body>
+		<!--id는 고유하나만 인식시킴-->
+		<p>스타일은 상위기준속성이<br>하위기준속성으로 우선대치된다<br>하위속성기준우선</p>
+		<hr>
+		<p>기본 font 크기의 설정은 16px 12pt 1em</p>
+		<hr>
+		<p class="f1">기본단위 <span class="s1">12pt</span></p>
+		<p class="f2">절대단위 24pt</p>
+		<p class="f3">기본단위 16px</p>
+		<p class="f4">절대단위 32px</p>
+		<hr>
+		<p class="fs1">font-size:상대단위 100% 기본</p>
+		<p class="fs2">font-size:상대단위 200%</p>
+		<p class="fs3">font-size:상대단위 300%</p>
+		<hr>
+		<p class="fk1">font-size키워드 small</p>
+		<p class="fk2">font-size키워드 medium</p>
+		<p class="fk3">font-size키워드 large</p>
+		<p class="fk4">font-size키워드 x-large</p>
+		<hr>
+		<p class="a1">font-size:상대단위 1em 기본</p>
+		<p class="a2">font-size:상대단위 1.5em</p>
+		<p class="a3">font-size:상대단위 2em</p>
+		<hr>
+	</body>
+
+</html>

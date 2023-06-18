@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- th : 행 이름, tr : 행, td : 열, caption : 타이틀을 달아주는 태그 -->
+  <!-- 보통 HTML은 틀만, 스타일은 CSS에서 한다, 지금은 예제로 사용해봄 -->
+  <table border="1" width="500">
+    <caption>상품 목록</caption>
+    <!-- 행 그룹화 태그 thead, tfoot, tbody - 순서는 head, foot, body로 해야 인식된다-->
+    <!-- 열 그룹화 태그 colgroup -->
+    <colgroup>
+      <col style="background-color: aqua;">
+      <col style="background-color: rgb(39, 141, 141);">
+      <col span="2" style="background-color: rgb(238, 140, 49);">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>상품 번호</th>
+        <th>상품 이름</th>
+        <th>상품 수량</th>
+        <th>상품 가격</th>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td>총 주문 금액</td>
+        <td colspan="3">25000</td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>삼성 TV</td>
+        <td>1</td>
+        <td>10000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>LG TV</td>
+        <td>1</td>
+        <td rowspan="2">15000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Apple TV</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+
+  </table>
+</body>
+
+</html>

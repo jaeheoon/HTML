@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>border-radius</title>
+
+  <style>
+    * {margin:0; padding:0; box-sizing: border-box;}
+    
+    div {
+    width: 150px; 
+    height: 150px; 
+    border: 10px solid black; 
+    margin: 5px; 
+    text-align: center;
+    line-height: 130px;   /* border -20px */
+    background: red;
+    color: white;
+    }
+
+    #radius_0_div {
+    border-radius: 50px 0px 0px 0px;
+    }
+     /* 상단 왼쪽에 50픽셀의 반지름을 적용합니다. (좌상) */
+    #radius_1_div {
+    border-radius: 0px 50px 0px 0px;
+    }
+     /* 상단 오른쪽에 50픽셀의 반지름을 적용합니다. (우상) */
+    #radius_2_div {
+    border-radius: 0px 0px 50px 0px;
+    }
+     /* 하단 오른쪽에 50픽셀의 반지름을 적용합니다. (우하) */
+    #radius_3_div {
+    border-radius: 0px 0px 0px 50px;
+    }
+     /* 하단 왼쪽에 50픽셀의 반지름을 적용합니다. (좌하) */
+    #radius_4_div {
+    border-radius: 50px; 0px;
+    }
+     /* 상단 왼쪽, 하단 오른쪽에 50픽셀의 반지름을 적용합니다. (좌상 우하) */
+    #radius_5_div {
+    border-radius: 0px; 50px;
+    }
+     /* 상단 오른쪽, 하단 왼쪽에 50픽셀의 반지름을 적용합니다. (우상 좌하) */
+    #radius_6_div {
+    border-radius: 50px;
+    }
+     /* 모든모서리에 50픽셀의 반지름을 적용합니다. */
+    #radius_7_div {
+    border-radius: 20px 50px 80px;
+    }
+     /* 상단 왼쪽20px, 상단 오른쪽50px, 하단오른쪽 80px, 하단왼쪽에 50px의 반지름을 적용합니다. */
+    #radius_8_div {
+    border-radius: 150px;
+    }
+     /* border-radius: 50%; */
+     /* div 요소의 너비만큼 150픽셀의 반지름을 적용, 50%의 반지름을 적용 */
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <div id="radius_0_div"> 50px 0px 0px 0px; </div>
+  <div id="radius_1_div"> 0px 50px 0px 0px; </div>
+  <div id="radius_2_div"> 0px 0px 50px 0px; </div>
+  <div id="radius_3_div"> 0px 0px 0px 50px; </div>
+  <div id="radius_4_div"> 50px; 0px; </div>
+  <div id="radius_5_div"> 0px; 50px; </div>
+  <div id="radius_6_div"> 50px; </div>
+  <div id="radius_7_div"> 20px 50px 80px; </div>
+  <div id="radius_8_div"> 150px; </div>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<style>
+			*{margin:0; padding:0;}
+			a{text-decoration : none;}
+			address{font-style : normal;}
+			
+			div{width:300px; height:200px; background:red; margin:10px;}
+			#box_d{width:300px; height:200px; color:#fff; border:30px solid black;}
+			#border_box_d{box-sizing:border-box; border:30px solid black; 
+			width:300px; height:200px; color:#fff; padding:10px;}
+			#content-box_d{box-sizing:content-box; border:30px solid black; 
+			width:300px; height:200px; color:#fff; padding:10px;}
+			/*웹 기본값은 box-sizing:content-box 입니다.*/
+		</style>
+	</head>
+
+	<body>
+		<div>기본형 width:300px; height:200px;
+		</div>
+		<div id="box_d">기본형 width:300px; height:200px;</div>
+		<div id="border_box_d">box-sizing:border-box; 30픽셀의 테두리를 안쪽에 그려줍니다.</div>
+		<div id="content-box_d">box-sizing:content-box; 외부에 30픽셀의 테두리를 그려줍니다. 
+		기본값은 box-sizing:content-box 입니다.</div>
+	</body>
+
+</html>

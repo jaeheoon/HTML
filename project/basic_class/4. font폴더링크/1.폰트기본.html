@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>font 기본</title>
+		<style>
+			@font-face{font-family:'NGothic';
+			src:url('font/Nanum_Gothic/NanumGothic-Regular.ttf')}
+			
+			@font-face{font-family:'NGothicB';
+			src:url('font/Nanum_Gothic/NanumGothic-Bold.ttf')}
+			
+			@font-face{font-family:'NGothicEB';
+			src:url('font/Nanum_Gothic/NanumGothic-ExtraBold.ttf')}
+		
+			*{margin:0; padding:0;}
+			
+			div{width:800px; margin: 10px 0px; border: 5px solid green; border-radius:5px;}
+			
+			#font_0_d{font-size:1em;  font-family:'NGothic', sans-serif; text-indent:12pt; color:green;} /*축약*/
+			/*#font_0_div{font-size:12px; font-family:'NGothic', sans-serif; line-height:12px; text-indent:12pt;} 풀어쓰기*/
+			
+			#font_1_d{font-size:1em; 
+			font-family:'NGothicB', sans-serif; 
+			line-height:1em; 
+			text-decoration: underline; text-align:center;}
+			
+			#font_2_d{font-size:18pt; 
+			font-family:'NGothicEB', sans-serif; 
+			line-height:2; 
+			text-decoration: line-through; text-align:right; background:yellow;}
+			
+			/*경로는 src:url('  ') 안에 넣어야함*/
+			/*@font-face명시 font-family명은 임의지만 규칙 지켜주는 것이 좋음, font 폴더 안에 서체
+			있어야지만 인식함, 서버에도 같이 올려야함*/
+			/*margin 위에 font-face명시*/
+		</style>
+	</head>
+
+	<body>
+		<div id="font_0_d"><!--원랜 id명에 클래스, div, 태그명, 숫자 넣으면 안됨, 현재는 예제라 넣음-->
+			font-size: 폰트의 크기를 지정합니다.<br/>
+			text-indent: 20px;<br/>
+			font-size: 12pt;<br/>
+			font-family: 'NGothic', sans-serif;<br/>
+			font-style: normal;<br/>
+			font-weight: normal;<br/>
+			line-height: 12px;<br/>
+			text-align: left;<br/>
+			text-decoration: none;
+		</div>
+		
+		<div id="font_1_d">
+			font-size: 폰트의 크기를 지정합니다.<br/>
+			text-indent: 20px;<br/>
+			font-size: 12pt;<br/>
+			font-family: 'NGothic', sans-serif;<br/>
+			font-style: normal;<br/>
+			font-weight: normal;<br/>
+			line-height: 12px;<br/>
+			text-align: left;<br/>
+			text-decoration: none;
+		</div>
+		
+		<div id="font_2_d">
+			font-size: 폰트의 크기를 지정합니다.<br/>
+			text-indent: 20px;<br/>
+			font-size: 12pt;<br/>
+			font-family: 'NGothic', sans-serif;<br/>
+			font-style: normal;<br/>
+			font-weight: normal;<br/>
+			line-height: 12px;<br/>
+			text-align: left;<br/>
+			text-decoration: none;
+		</div>
+	</body>
+
+</html>

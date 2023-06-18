@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<style>
+			*{margin:0; padding:0;}
+			a{text-decoration : none;}
+			address{font-style : normal;}
+			
+			pre{font-size:1.5em;}
+			
+			div{font-size:2em; border:1px solid black;}
+			div:nth-child(1){background:red;}/*10 이상은 안씀*/
+			div:nth-child(2){background:#ff0000;}/*f00*/
+			div:nth-child(3){background:rgb(255, 0, 0);}
+			div:nth-child(4){background:rgba(255, 0, 0, 1);}
+			div:nth-child(5){background:hsl(360, 100%, 50%);}
+			div:nth-child(6){background:hsla(360, 100%, 50%, 1);}
+			/*빨간색의 다양한 코드*/
+			/*http://hslpicker.com/#3c00ff : hsl rgb 변환 사이트*/
+		</style>
+	</head>
+
+	<body>
+		<div>red</div>
+		<div>#ff0000</div>
+		<div>rgb(255, 0, 0)</div>
+		<div>rgba(255, 0, 0, 1)</div>
+		<div>hsl(360, 100%, 50%)</div>
+		<div>hsla(360, 100%, 50%, 1)</div>
+		
+		<p><pre>
+#RRGGBB											HEX 코드 값 단위
+
+											RR-red, GG-green, BB-blue
+											각각의 해당 값은 00 ~ FF까지
+											16진수로 표현됩니다.
+											
+rgb(red, green, blue)									RGB 색상값 단위
+
+											0~255 사이의 값으로 배합율은 0%~100% 입니다.
+																
+rgb(red, green, blue, alpha)								RGBA 색상값 단위
+
+											0~255 사이의 값으로 배합율은 0%~100% 입니다.
+											255인 경우 100% 배합율입니다.
+											alpha는 0.0 ~ 1.0으로 투명도입니다.
+											1.0인 경우 불투명입니다.
+											
+hsl(hue, saturation, lightness)								HSL 색상값 단위
+
+											hue : 0 ~ 360도의 값을 가집니다. 색상값입니다.
+											saturation : 0% ~ 100%값을 가지며, 채도값입니다.
+											lightness : 0% ~ 100%값을 가지며, 밝기 명도값입니다.
+											
+hsla(hue, saturation, lightness, alpha)							HSLA 색상값 단위
+
+											hue : 0 ~ 360도의 값을 가집니다. 색상값입니다.
+											saturation : 0% ~ 100%값을 가지며, 채도값입니다.
+											lightness : 0% ~ 100%값을 가지며, 밝기 명도값입니다.
+											alpha는 0.0 ~ 1.0으로 투명도입니다.
+											1.0인 경우 불투명입니다.
+</pre></p>
+	</body>
+
+</html>

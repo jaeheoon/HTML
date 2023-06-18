@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<style>
+			/*{margin:0; padding:0;}*/
+			#a1{font-size:16px; border:10px solid red;}
+			#a2{font-size:32px; border:1px solid red;}
+			
+			#b1{font-size:12pt; border:10px solid blue;}
+			#b2{font-size:24pt; border:1px solid blue;}
+			
+			#c1{font-size:3em; border:10px solid green;}
+			#c2{font-size:1em; border:1px solid blue;}
+			#c3{font-size:2em; border:1px solid blue;}
+			
+			#d1{font-size:1em; border:10px solid green;}
+			#d2{font-size:1em; border:1px solid blue;}
+			#d3{font-size:2em; border:1px solid blue;}
+			
+			#e1{font-size:3rem; border:10px solid orange;}
+			#e2{font-size:1rem; border:1px solid green;}
+			#e3{font-size:2rem; border:1px solid green;}
+		</style>
+	</head>
+
+	<body>
+		<div id="a1">
+			<p>기본단위 16px</p>
+			
+			<div id="a2">
+				<p>단위32px상속부모의 영향없음</p>
+			</div>
+		</div>
+		<p></p>
+		<p></p>
+		
+		<div id="b1">
+			<p>기본단위 12pt</p>
+			
+			<div id="b2">
+				<p>단위24pt상속부모의 영향없음</p>
+			</div>
+		</div>
+		
+		<p></p>
+		<p></p>
+		
+		<div id="c1">
+			<p>상속3em</p>
+			
+			<div id="c2">
+				<p>기본단위1em상속부모의 영향있음</p>
+				<div id="c3">
+					<p>단위2em상속부모의 영향있음</p>
+				</div>
+			</div>
+		</div>
+		
+		<p></p>
+		<p></p>
+		
+		<div id="d1">
+			<p>상속1em</p>
+			
+			<div id="d2">
+				<p>기본단위1em상속부모의 영향있음</p>
+				<div id="d3">
+					<p>단위2em상속부모의 영향있음</p>
+				</div>
+			</div>
+		</div>
+		
+		<p></p>
+		<p></p>
+		
+		<div id="e1">
+			<p>상속3rem</p>
+			
+			<div id="e2">
+				<p>기본단위1rem상속부모의 영향없음</p>
+				<div id="e3">
+					<p>단위2rem상속부모의 영향없음</p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

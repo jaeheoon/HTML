@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>박스쉐도우</title>
+  
+  <style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  a {text-decoration: none;}
+  
+ /* 이기적인(자기몸만아는 인라인요소)a태그를 블럭화시키고, 몸값을 a태그안에 넣어주기! p태그 패딩값 가져오기 */
+
+ /* padding 높이 제어 */
+  p.pp {
+  width: 250px; 
+  font-size:40px; 
+  text-align:center; 
+  margin: 0 auto; 
+  border-radius: 10px; 
+  border: 1px solid gray;
+  background: #eee; 
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 1px #333; 
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, .5);}
+   /* 000이 블랙인데 0.5 흐림을 준것, rgb(웹색상):레드그린블루, a알파값: 투명도 */ /* 가로 세로 번짐정도 그림자색상 */ /* rgba(225,0,0,0.1) rgb값으로 주면서 끝에 알파값으로 opacity(투명도)를 줄수있다 1:불투명 0.5:반투명 0: 투명 (0.5은 .5로 표기가능) */ /* 박스안에 정보글과 정보이미지 보호할 때 쓴다 (ex. navigation 구조) */
+
+   p.pp a:hover {background: #000; color:red; border-radius: 10px;}
+   p.pp a {display:block; text-decoration:none; color:#999; padding: 30px;}
+
+
+
+ /* line-heigt 높이 제어 (p태그에서, div도 가능) */
+   p.lp {
+   width: 250px; 
+   font-size:40px; 
+   text-align:center; 
+   margin: 0 auto; 
+   border-radius: 10px; 
+   border: 1px solid gray;
+   background: #eee;
+   box-shadow: 5px 5px 1px #333; 
+   box-shadow: 5px 5px 1px rgba(0, 0, 0, .5);
+   height: 120px; 
+   line-height: 118px;
+   margin-bottom: 20px;} 
+
+   p.lp a:hover {background: #000; color:red; border-radius: 10px;}
+   p.lp a {display:block; text-decoration:none; color:#999;}
+
+ /* line-heigt 높이 제어 (a태그에서) */
+   p.op {
+   width: 250px; 
+   font-size:40px; 
+   text-align:center; 
+   margin: 0 auto; 
+   border-radius: 10px; 
+   border: 1px solid gray;
+   background: #eee;
+   box-shadow: 5px 5px 1px #333; 
+   box-shadow: 5px 5px 1px rgba(0, 0, 0, .5);
+   height: 120px; 
+   margin-bottom: 20px;} 
+
+   p.op a:hover {background: #000; color:red; border-radius: 10px;}
+   p.op a {display:block; text-decoration:none; color:#999; line-height: 118px;}
+  
+  </style>
+
+</head>
+
+
+<body>
+
+   <p class="pp"><a href="https://www.naver.com">CSS3</a></p> <!-- 가상링크(손바닥 구현) -->  <!-- a태그는 css3만 알고 부모는 인식못함 --> <!-- a태그 inline(요소)을 블럭화시키면 부모를 인식하게 변함 -->
+   <p class="lp"><a href="#">CSS3</a></p>
+   <p class="op"><a href="#">CSS3</a></p>
+
+</body>
+
+</html>

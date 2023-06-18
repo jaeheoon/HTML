@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>opacity, alpha 차이</title>
+		<style>
+			*{margin:0; padding:0;}
+			a{text-decoration : none;}
+			address{font-style : normal;}
+			
+			div{background:red; width:300px; height:100px; text-align:center; font-size:1.5em; font-weight:bold;
+			margin:10px auto; line-height:100px;}
+			
+			.normal_div{opacity: 1.0}
+			.opacity_div{opacity: 0.5}
+			.alpha_div{background:rgba(255, 0, 0, 0.5)}
+			
+			body{background:pink;}
+		</style>
+	</head>
+
+	<body>
+		<div class="normal_div">1. opacity: 1.0</div>
+		<div class="opacity_div">2. opacity: 0.5</div>
+		<div class="alpha_div">3. alpha: 0.5</div>
+	</body>
+
+</html>

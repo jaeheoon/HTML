@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>옆나열</title>
+  
+  <style>
+  *{margin:0; padding:0;}
+
+  #tbox{width: 400px; background:red; margin: 0 auto; border: 1px solid red; overflow:hidden;}
+  /* overflow:hidden; */
+  #border_box_div{width: 50%; height: 200px; background: blue; border: 30px solid black; padding: 10px;
+  box-sizing:border-box; float:left;}
+  #content_box_div{width: 50%; height: 200px; background: blue; border: 30px solid pink; padding: 10px;
+  box-sizing:border-box; float:left;}
+  /* 옆으로 붙이려면 배율을 줄여야 함, content_box_div에도 박스사이징 주기! */
+  /* 작업할 때 부모는 %로 사이즈 표기, 부모는 스타트위치, 가로사이즈(폭)만 제어(높이 제어X), overflow:hidden; 속성 부여*/
+  /* overflow:hidden; : 부모가 자식을 포함하면서 자식요소의 크기 자동 조정(부모가 자식을 싸게되어) */
+  
+  
+  </style>
+
+</head>
+
+
+<body>
+  <div id="tbox">
+   <div id="border_box_div">30픽셀의 테두리를 안쪽에 그려줍니다.</div>
+   <div id="content_box_div">외부의 30픽셀의 테두리를 그려줍니다.</div>
+  </div>
+
+
+
+</body>
+
+</html>

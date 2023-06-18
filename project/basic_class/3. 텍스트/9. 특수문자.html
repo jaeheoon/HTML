@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>entity 특수문자</title>
+		<style>
+			*{margin:0; padding:0;}
+			a{text-decoration : none;}
+			address{font-style : normal;}
+			/*위 세가지는 필수로 들어가야함*/
+			span.color{font-size:50pt; color:pink;}
+			p.name{color:gray; font-size:30pt; text-align:center;}
+			p.name1{color:gray; font-size:25pt; text-align:center; color:orange;}
+			p.name2{font-size:50pt; text-align:center;}
+			p.page_btn{text-align:center; margin-top:150px;}
+			a:hover{color:red; text-decoration : underline;}
+			/*text-align:center; : 블럭 안에서 글 가운데 정렬*/
+			hr{margin-top:30px; height: 5px; background-color:green; border:0px;}
+			/*아니면 hr{margin-top:30px; border:5px solid green;}*/
+			p.page_btn a{text-align:center; font-weight:bold; font-size:50pt; color:red;}
+			/*종속, 상속 개념, p안에 page_btn안에 a태그에 속성 변경*/
+			p.page_btn a:hover{color:green; text-decoration : underline;}
+			
+			/*보통 margin은 위에서 아래로 민다, margin-bottom을 주로 씀*/
+			/*html 구성요소는 block요소, inline요소가 있다. block요소는 div, h1, p태그, inline요소는 a태그*/
+		</style>
+	</head>
+
+	<body>
+		<!--entitycode.com 특수문자 사이트-->
+		<!--html5에서는 주소태그 사용시 연락처(전화, 이메일주소, 저작권정보)등을 address 태그로 쓰고
+		일반 주소는 p태그로도 사용가능-->
+		<p class="name">p태그jaeheon<span class="color">&#9829;</span>hong</p>
+		<p class="name">p태그jaeheon<span class="color">★★★</span>hong</p>
+		<p class="name1">p태그서울시 마포구 상수동 1201호</p>
+		<p class="name2"><address>address태그서울시 마포구 상수동 1201호</address></p>
+		<hr>
+		<p class="page_btn">
+			<a href="http://www.naver.com"><<</a>
+			<a href="http://www.naver.com">&lt;</a>
+			<a href="http://www.naver.com">LIST</a>
+			<a href="http://www.naver.com">&gt;</a>
+			<a href="http://www.naver.com">&gt;&gt;</a>
+		</p>
+	</body>
+
+</html>

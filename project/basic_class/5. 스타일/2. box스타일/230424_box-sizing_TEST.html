@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>box-sizing-TEST</title>
+		<style>
+			*{margin:0; padding:0;}
+			a{text-decoration : none;}
+			address{font-style : normal;}
+			div{width:500px; text-align:center; margin:20px auto; background:#999; }
+			div.b1{padding:150px; border:20px solid blue; box-sizing:content-box;}
+			div.b2{padding:150px; border:20px solid blue; box-sizing:border-box;}
+			
+			div.b3{height:300px; line-height:240px; border:20px solid blue; box-sizing:border-box; padding:10px;}
+			/*높이값과 line-height은 동일 값으로 한다 *다만 border와 padding이 있으면 제외하고 line-height을 줘야함 10+20+20+10*/
+			
+			div.b4{height:300px; line-height:230px; border:20px solid blue; box-sizing:border-box; padding:15px;}
+		</style>
+	</head>
+
+	<body>
+		<div>원래박스</div>
+		<div class="b1">box-sizing:content-box;</div>
+		<div>원래박스</div>
+		<div class="b2">box-sizing:border-box;</div>
+		<div class="b3">box-sizing:border-box;</div>
+		<div class="b4">box-sizing:border-box;</div>
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+div.g{width:200px; height:200px; font-size:20px;
+margin-bottom:25px auto; line-height:200px; text-align:center;}
+div.grad0{
+background:-webkit-linear-gradient(#f00 10%, #fc0 90%);/*상단부터 하단으로*/
+background:-moz-linear-gradient(#f00 10%, #fc0 90%);
+background:linear-gradient(#f00 10%, #fc0 90%);}
+/*webkit-linear-gradient, linear-gradient은 기본적으로 줘야함, webkit-linear-gradient은 크롬, linear-gradient은 기본*/
+
+div.grad1{
+background:-webkit-linear-gradient(45deg, #6C6 5%, #F6C 45%, #36C 95%);/*45도*//*각도(deg는 위0도에서 시계방향으로 흐름)*/
+background:-moz-linear-gradient(45deg, #6C6 5%, #F6C 45%, #36C 95%);
+background:linear-gradient(45deg, #6C6 5%, #F6C 45%, #36C 95%);}
+
+div.grad2{
+background:-webkit-linear-gradient(150deg, #6fc 10%, #ff3 50%, #3fC 90%);}
+
+div.grad3{
+background:-webkit-radial-gradient(#f00 5%, #fc0 50%, #636 90%);/*중심축으로 안쪽부터*/
+background:-moz-radial-gradient(#f00 5%, #fc0 50%, #636 90%);
+background:-webkit-radial-gradient(#f00 5%, #fc0 50%, #636 90%);}
+/*radial-gradient은 원형 그라데이션, linear-gradient은 선 그라데이션*/
+
+/*칼라질라 이용하기*/
+div.grad4{
+	background: -moz-linear-gradient(top,  rgba(45,229,186,1) 0%, rgba(73,198,53,0) 100%);
+	background: -webkit-linear-gradient(top,  rgba(45,229,186,1) 0%,rgba(73,198,53,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(45,229,186,1) 0%,rgba(73,198,53,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2de5ba', endColorstr='#0049c635',GradientType=0 ); /* IE6-9 */
+}
+
+div.grad5{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fceabb+0,fccd4d+31,f8b500+72,fbdf93+100 */
+background: rgb(252,234,187); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 31%, rgba(248,181,0,1) 72%, rgba(251,223,147,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 31%,rgba(248,181,0,1) 72%,rgba(251,223,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 31%,rgba(248,181,0,1) 72%,rgba(251,223,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

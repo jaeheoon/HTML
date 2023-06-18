@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>line-height 간격</title>
+
+  <style>
+   * {magin:0; padding:0;} 
+
+   p {
+   width: 500px; 
+   margin: 0 auto;     /* 블럭 가운데 정렬 (width값 존재해야함) */
+   text-align: justify;  /* 양쪽 정렬 */
+   text-indent: 16px; 
+   border-top: 15px solid red; 
+   border-bottom: 15px solid red;
+
+   /* 풀어써서 하는 방법
+   border-width: 10px 0;
+   border-color: red;
+   border-style: solid; */
+
+   padding: 20px; 10px;
+   line-height: 1.4;}
+   /* 줄간격 16*1.4배한 px값. 기본 픽셀수는 16px이기때문에 16/1.4~1.6이 가장 보기 좋음 */
+   /* 0.8 혹은 0.75일때는 1.2정도 좋음 작업성격에 따라 가감 */
+
+   p span.a1 {
+   background: pink; 
+   color: blue;}
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <p>6가지 요건을 모두 충족해야 지원 대상이 된다. 집값 하락으로 보증금을 돌려받지 못한 깡통전세 피해자는 지원 대상에서 제외되는 셈이다. 피해자로 인정되면 직접 경매 <span class="a1">유예·정지</span> 신청을 할 수 있다. 경매 유예로 살던 집에서 당장 쫓겨나는 일을 막은 상태에서 정부는 피해자가 살던 집을 매수하거나 임대로 거주하는 두 가지 선택을 할 수 있도록 했다. 경매에서 임차주택을 떠안는 방법으로 보증금을 일부라도 건져야 하는 피해자에게는 우선매수권을 부여한다. 단, 최고가 낙찰액과 같은 가격에 주택을 살 수 있다.</p>
+
+
+</body>
+
+</html>
