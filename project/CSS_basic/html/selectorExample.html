@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello</title>
+  <style>
+    /* * : 모든 선택자 */
+    /* * {
+      color: red;
+    } */
+
+    header {
+      background-color: yellow;
+      color: blue;
+      font-size: 25px;
+    }
+
+    #title {
+      color: yellowgreen;
+      border: 3px dotted pink;
+    }
+
+    .contents {
+      background-color: aqua;
+    }
+
+    .some {
+      color: blue;
+    }
+
+    /* 속성 선택자 */
+    a[name="top"] {
+      background-color: blueviolet;
+      color: white;
+    }
+
+    [data-title $= "a"] {
+      background-color: gold;
+    }
+
+    header, nav, aside, #title {
+      border: 2px solid red;
+    }
+
+    /* 자식을 지정 안해줄 경우 box 안에 내용물에 전부 적용되지만 자식을 지정해주면 자식만 변경된다 */
+    #box > ul > li > div {
+      background-color: red;
+    }
+    /* 자손선택자 : 위에 코드와 동일하다 */
+    #box div {
+      background-color: red;
+    }
+
+    /* 형제선택자 
+    + : 인접 형제 선택자 -  형제 하나만
+    ~ : 일반 형제 선택자 - 형제 밑에 여러개 */
+    h1 ~ h2 {
+      color: brown;
+      border: 2px solid yellowgreen;
+    }
+
+    p::after {
+      content: "<h2>동적 추가</h2>";
+      background-color: beige;
+    }
+
+    ::selection {
+      background-color: antiquewhite;
+      color: red;
+    }
+
+    /* 링크 처음 밑줄 삭제해줄때 */
+    a:link {
+      text-decoration: none;
+    }
+    /* 링크 텍스트에 올려놨을때 */
+    a:hover {
+      text-decoration: underline;
+    }
+    /* 링크 꾹 누르고 있을때 */
+    a:active {
+      background-color: blue;
+    }
+    /* 한 번 이상 방문했을때 */
+    a:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* 인풋 텍스트를 클릭했을때 색깔 변경 */
+    input:focus {
+      background-color: gold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <a name="top">문서의 첫번째 위치</a>
+  <header>로그, 메뉴, 검색</header>
+  <nav>내부, 외부 리소스 연결하는 메뉴들</nav>
+  <aside>부가적인 메뉴들</aside>
+  <main>
+    <section>
+      <h2>오늘부터 CSS3 공부입니다</h2>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Odit, est suscipit, porro illo eos officia aperiam assumenda neque
+        expedita nihil dolores quod vitae nemo aliquid minus esse consectetur repellendus? Minus.
+      </article>
+    </section>
+    <section>논리적 주 내용</section>
+    <section>논리적 주 내용</section>
+    <section>논리적 주 내용</section>
+  </main>
+
+  <div id="title">아이디 선택자 연습</div>
+
+  <!-- 밑 6문장을 한 그룹으로 묶어서 css를 적용하고 싶을때 class로 묶어서 사용한다 -->
+  <p class="contents some">클래스 선택자 연습</p>
+  <p class="contents">클래스 선택자 연습</p>
+  <p class="contents some">클래스 선택자 연습</p>
+  <span class="contents">클래스 선택자 연습 span</span>
+  <span class="contents">클래스 선택자 연습 span</span>
+  <span class="contents">클래스 선택자 연습 span</span><br>
+
+  <a href="#">현재 페이지</a>
+  
+
+  <pre>
+    name 태그 사용하기위해 공백 생성
+
+
+
+
+
+  </pre>
+
+  <footer>연락처, 저작권, 사이트 등등</footer>
+
+  <a href="#top">처음으로</a>
+
+  <!-- data : 사용자 추가 속성 -->
+  <p data-title= "bangry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Architecto nam fuga aliquam dolores beatae nulla perspiciatis 
+    asperiores pariatur omnis molestias fugit voluptatem, natus, possimus 
+    recusandae illo itaque! Aperiam, obcaecati! Et.</p>
+  <p data-title= "banana">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Architecto nam fuga aliquam dolores beatae nulla perspiciatis 
+    asperiores pariatur omnis molestias fugit voluptatem, natus, possimus 
+    recusandae illo itaque! Aperiam, obcaecati! Et.</p>
+
+    <div id = "box">
+      <ul>필요없는 내용
+        <li>필요없는 내용2
+          <div>
+            나는 자식입니다
+          </div>
+        </li>
+        <li>
+          목록입니다
+        </li>
+      </ul>
+    </div>
+    </table>
+
+    <h2>xxxxxxxxxxxxxx</h2>
+    <h1>yyyyyyyyyyyyyy</h1>
+    <h2>zzzzzzzzzzzzzz</h2>
+    <h2>tttttttttttttt</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Ad porro itaque ipsum ea delectus natus atque non, illum eligendi 
+      architecto magnam recusandae voluptatem possimus, cum consequatur 
+      odio vel. Ullam, repellendus.</p>
+
+    <!-- 가상 클래스 선택자를 연습하기 위해 a태그 생성 -->
+    <a href="https://www.naver.com">naver</a>
+
+    <!-- 가상 클래스 선택자를 연습하기 위해 input태그 생성 -->
+    <input type="text">
+
+</body>
+
+</html>
