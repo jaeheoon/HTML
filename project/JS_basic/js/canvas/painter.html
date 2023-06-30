@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림판</title>
+    <link rel="stylesheet" href="paniter.css">
+    <script defer src="painter.js"></script>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="tools">
+        <!-- 색상선택 -->
+        <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+        <!-- 컬러피커  -->
+        <input onInput="draw_color= this.value" type="color" class="color-picker" style="width:70px">
+        <!-- 펜굵기 조절 -->
+        <input type="range" min="1" max="100" class="pen-range" onInput="draw_width=this.value">
+        <!-- 되돌리기, 지우기, 저장 버튼  -->
+        <button onclick="undo_last()" type="button" class="button">되돌리기</button>
+        <button onclick="clear_canvas()" type="button" class="button">지우기</button>
+        <button onclick="save()" type="button" class="button">저장하기</button>
+    </div>
+</body>
+
+</html>
