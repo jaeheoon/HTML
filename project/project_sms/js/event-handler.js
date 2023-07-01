@@ -28,21 +28,21 @@ class EventHandler {
         this.findName(event);
       }
     });
-    
+
     // 학번으로 선택됐을때 정렬
     document.querySelector('#sortSelect').addEventListener('click', event => {
       let sortMenu = document.querySelector('#sortSelect');
       if (sortMenu.value === '기본') {
         console.log('기본');
         this.sortBySsn();
-        
+
       } else if (sortMenu.value === 'ssn') {
         console.log('성적');
       } else {
         console.log('이름');
       }
     })
-    
+
     // 전체 학생 목록 출력
     window.addEventListener('load', event => {
       this.findAllStudent(event);
@@ -51,43 +51,45 @@ class EventHandler {
 
   // 기본 정렬 메소드
   sortBySsn() {
-     // 총점으로 순위 구하기
-     const rankings = this.rankSum(studentRepository);
-     
-     // 결과 출력
-     rankings.forEach(({ rank }) => {
-       console.log(`${rank}`);
-      });
-    }
+    // 총점으로 순위 구하기
+    const rankings = this.rankSum(studentRepository);
 
-    // 총점으로 순위 구하는 메소드
-    rankSum(studentRepo) {
-      const sortedStudents = studentRepo.findAllBySort((a, b) => b.getSum() - a.getSum());
-      const rankings = [];
-  
-      sortedStudents.forEach((index) => {
-        const rank = index + 1;
-        rankings.push({rank});
-      });
-      return rankings;
-    }
+    // 결과 출력
+    rankings.forEach(({ rank }) => {
+      console.log(rank);
+    });
+  }
+
+  // 총점으로 순위 구하는 메소드
+  rankSum(studentRepo) {
+    const sortedStudents = studentRepo.findAllBySort((a, b) => b.getSum() - a.getSum());
+
     
-    //  학생 등록 메소드
-    addStudent(event) {
-      const ssn = Number(document.inputForm.ssn.value);
-      const name = document.inputForm.studentName.value;
-      const korean = Number(document.inputForm.korScore.value);
-      const english = Number(document.inputForm.engScore.value);
-      const math = Number(document.inputForm.matScore.value);
-      
-      
-      if (!Validator.hasText(ssn)) {
-        alert('학번을 입력하여주세요');
+    const rankings = [];
+
+    sortedStudents.forEach((index) => {
+      const rank = index + 1;
+      rankings.push({ rank });
+    });
+    return rankings;
+  }
+
+  //  학생 등록 메소드
+  addStudent(event) {
+    const ssn = Number(document.inputForm.ssn.value);
+    const name = document.inputForm.studentName.value;
+    const korean = Number(document.inputForm.korScore.value);
+    const english = Number(document.inputForm.engScore.value);
+    const math = Number(document.inputForm.matScore.value);
+
+
+    if (!Validator.hasText(ssn)) {
+      alert('학번을 입력하여주세요');
+    } else {
+      const allList = studentRepository.getStudents();
+      if (studentRepository.findBySsn(ssn)) {
+        alert('이미 등록된 학번입니다');
       } else {
-        const allList = studentRepository.getStudents();
-        if (studentRepository.findBySsn(ssn)) {
-          alert('이미 등록된 학번입니다');
-        } else {
         const student = new StudentClass(ssn, name, korean, english, math);
         studentRepository.addStudent(student);
         alert('등록이 완료되었습니다');

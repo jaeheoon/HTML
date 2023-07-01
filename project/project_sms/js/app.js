@@ -1,7 +1,7 @@
 // 메인 실행 프로그램
 import { StudentClass } from "./studenClass.js";
 import { StudentRepository } from "./student-repository.js";
-import { EventHandler } from "./event-handler.js";
+import { EventHandler } from "./event-handler2.js";
 
 let studentRepository = new StudentRepository();
 

@@ -47,7 +47,7 @@ class StudentRepository {
   }
 
   // 정렬하여 전체 검색
-  findAllBySort(fn) {
+  findBySort(fn) {
     return this.students.sort(fn);
   }
 }
